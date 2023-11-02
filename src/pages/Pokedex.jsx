@@ -80,15 +80,15 @@ const Pokedex = () => {
   return (
     <main>
       <HeaderPokeballs />
-      <section>
+      <section className="grid justify-items-center font-bold p-2" >
         <p>
-          <span>Welcome {trainerName}, </span>
+        Welcome <span className="text-red-600 font-bold"> {trainerName}, </span>
           here you can find your favorite pokemon
         </p>
         <form onSubmit={handleSubmit}>
           <div>
-            <input name="pokemonName" type="text" />
-            <button>Search</button>
+            <input className="border-solid border-2 border-black p-1" name="pokemonName" type="text" />
+            <button className="border-solid border-2 border-red-700 bg-red-500 text-white p-1">Search</button>
           </div>
           <select onChange={handleChangeType} className="capitalize">
             <option value="">All pokemons</option>
